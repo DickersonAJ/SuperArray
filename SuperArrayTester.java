@@ -9,6 +9,10 @@ public class SuperArrayTester {
     for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
+    words.set(0, "hello");
+    for(int i = 0; i < words.size(); i++){
+      System.out.println( words.get(i) );
+    }
   }
 
 }
