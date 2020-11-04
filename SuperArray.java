@@ -42,4 +42,32 @@ public class SuperArray {
     return size == 0;
   }
 
+  public void clear() {
+    for (int i = 0; i < size; i++) {
+      data[i] = null;
+    }
+    size = 0;
+  }
+
+  public String toString() {
+    String str = "[";
+    for (int i = 0; i < size; i++) {
+      str = str + data[i];
+      if (i < size - 1) {
+        str = str + ", ";
+      }
+    }
+    str = str + "]";
+    return str;
+  }
+
+  public boolean contains(String s) {
+    for (int i = 0; i < size; i++) {
+      if (data[i].equals(s)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
 }
