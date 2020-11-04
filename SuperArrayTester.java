@@ -19,6 +19,9 @@ public class SuperArrayTester {
     for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
+    SuperArray empty = new SuperArray();
+    System.out.println(empty.isEmpty());
+    System.out.println(words.isEmpty());
   }
 
 }

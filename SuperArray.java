@@ -38,4 +38,8 @@ public class SuperArray {
     data = moredata;
   }
 
+  public boolean isEmpty() {
+    return size == 0;
+  }
+
 }
