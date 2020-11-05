@@ -18,6 +18,8 @@ public class SuperArrayTester {
       words.add("constructors aren't void");
     }
     System.out.println(words.toString());
+    System.out.println(words.indexOf("uni"));
+    System.out.println(words.indexOf("xsdfrcgthjykbv"));
     /*for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
