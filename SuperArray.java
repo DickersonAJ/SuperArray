@@ -36,7 +36,7 @@ public class SuperArray {
   }
 
   private void resize() {
-    String[] moredata = new String[data.length + 10];
+    String[] moredata = new String[data.length * 2 + 1];
     for (int i = 0; i < data.length; i++) {
       moredata[i] = data[i];
     }
@@ -86,6 +86,14 @@ public class SuperArray {
       }
       set(index, element);
     }
+  }
+
+  public void remove(int index) {
+    for (int i = index; i < size; i++) {
+      set(i, data[i+1]);
+    }
+    set(size - 1, null);
+    size-=1;
   }
 
 }
