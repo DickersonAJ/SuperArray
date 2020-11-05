@@ -7,7 +7,12 @@ public class SuperArrayTester {
     words.add("uni");
     words.add("ebi");
     System.out.println(words.toString());
-    for(int i = 0; i < words.size(); i++){
+    words.add(1, "hola");
+    System.out.println(words.toString());
+    words.add(6, "hola");
+    words.add(0, "hola");
+    System.out.println(words.toString());
+    /*for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
     System.out.println(words.set(0, "hello"));
@@ -31,6 +36,7 @@ public class SuperArrayTester {
     System.out.println(words.toString());
     System.out.println(words.contains("hello"));
     System.out.println(words.contains("adios"));
+    SuperArray big = new SuperArray(100);*/
   }
 
 }

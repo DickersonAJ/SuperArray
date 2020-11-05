@@ -7,6 +7,11 @@ public class SuperArray {
     size = 0;
   }
 
+  public SuperArray(int initialCapacity) {
+    data = new String[initialCapacity];
+    size = 0;
+  }
+
   public int size() {
     return size;
   }
@@ -68,6 +73,19 @@ public class SuperArray {
       }
     }
     return false;
+  }
+
+  public void add(int index, String element) {
+      if (index >= size) {
+        add(element);
+      }
+      else {
+      add(data[size]);
+      for (int i = size+1; i > index-1; i--) {
+        set(i+1, data[i]);
+      }
+      set(index, element);
+    }
   }
 
 }
