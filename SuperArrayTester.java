@@ -23,6 +23,12 @@ public class SuperArrayTester {
     System.out.println(words.toArray());
     System.out.println(words.indexOf("hola"));
     System.out.println(words.lastIndexOf("hola"));
+    System.out.println(words.equals(words));
+    SuperArray wurds = new SuperArray();
+    wurds.add("bob");
+    wurds.add("uni");
+    wurds.add("ebi");
+    System.out.println(words.equals(wurds));
     /*for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
