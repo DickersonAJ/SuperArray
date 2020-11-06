@@ -21,6 +21,8 @@ public class SuperArrayTester {
     System.out.println(words.indexOf("uni"));
     System.out.println(words.indexOf("xsdfrcgthjykbv"));
     System.out.println(words.toArray());
+    System.out.println(words.indexOf("hola"));
+    System.out.println(words.lastIndexOf("hola"));
     /*for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
