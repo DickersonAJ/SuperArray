@@ -104,11 +104,16 @@ public class SuperArray {
       throw new IndexOutOfBoundsException("index of " + index
         + " is too large");
     }
+    if (index == size) {
+      add(element);
+    }
+    else {
       add(data[size]);
       for (int i = size+1; i > index-1; i--) {
         set(i+1, data[i]);
       }
       set(index, element);
+    }
   }
 
   public void remove(int index) {
