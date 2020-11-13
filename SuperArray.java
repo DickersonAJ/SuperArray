@@ -42,14 +42,14 @@ public class SuperArray {
   }
 
   public String set(int index, String element) {
-    /*if (index < 0) {
+    if (index < 0) {
       throw new IndexOutOfBoundsException("index of " + index
         + " cannot be negative");
     }
     if (index >= size) {
       throw new IndexOutOfBoundsException("index of " + index
         + " is too large");
-    }*/
+    }
     String str = data[index];
     data[index] = element;
     return str;

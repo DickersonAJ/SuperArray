@@ -99,7 +99,7 @@ public class SuperArrayTester {
       System.out.println(e1);
     }
     try {
-      work.set(300, "Y");
+      work.set(31, "Y");
       System.out.println(work.set(3, "Y"));
       System.out.println(work.get(3));
     }
