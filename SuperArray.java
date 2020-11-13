@@ -30,10 +30,26 @@ public class SuperArray {
   }
 
   public String get(int index) {
+    if (index < 0) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " cannot be negative");
+    }
+    if (index >= size) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " is too large");
+    }
     return data[index];
   }
 
   public String set(int index, String element) {
+    /*if (index < 0) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " cannot be negative");
+    }
+    if (index >= size) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " is too large");
+    }*/
     String str = data[index];
     data[index] = element;
     return str;
@@ -80,19 +96,30 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-      if (index >= size) {
-        add(element);
-      }
-      else {
+    if (index < 0) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " cannot be negative");
+    }
+    if (index > size) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " is too large");
+    }
       add(data[size]);
       for (int i = size+1; i > index-1; i--) {
         set(i+1, data[i]);
       }
       set(index, element);
-    }
   }
 
   public void remove(int index) {
+    if (index < 0) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " cannot be negative");
+    }
+    if (index >= size) {
+      throw new IndexOutOfBoundsException("index of " + index
+        + " is too large");
+    }
     for (int i = index; i < size; i++) {
       set(i, data[i+1]);
     }
@@ -127,6 +154,9 @@ public class SuperArray {
   }
 
   public boolean equals(SuperArray other) {
+    if (size != other.size()) {
+      return false;
+    }
     for (int i = 0; i < size; i++) {
       if (data[i].equals(other.get(i))) {
       }

@@ -9,7 +9,7 @@ public class SuperArrayTester {
     System.out.println(words.toString());
     words.add(1, "hola");
     System.out.println(words.toString());
-    words.add(6, "hola");
+    words.add(4, "hola");
     words.add(0, "hola");
     System.out.println(words.toString());
     words.remove(1);
@@ -28,9 +28,9 @@ public class SuperArrayTester {
     wurds.add("bob");
     wurds.add("uni");
     wurds.add("ebi");
-    System.out.println(words.equals(wurds));*/
+    System.out.println(words.equals(wurds));
 
-    /*for(int i = 0; i < words.size(); i++){
+    for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
     System.out.println(words.set(0, "hello"));
@@ -56,7 +56,43 @@ public class SuperArrayTester {
     System.out.println(words.contains("adios"));
     SuperArray big = new SuperArray(100);*/
 
-    SuperArray palabras = new SuperArray(-1);
+    try {
+      SuperArray problemChild = new SuperArray(-2);
+      System.out.println(problemChild);
+    }
+    catch (IllegalArgumentException e1) {
+      System.out.println(e1);
+    }
+
+    try {
+      SuperArray work = new SuperArray(20);
+      System.out.println(work);
+    }
+    catch (IllegalArgumentException e1) {
+      System.out.println(e1);
+    }
+
+    /*for (int i = problemChild.size(); i < 100; i++) {
+      problemChild.add("constructors aren't void");
+    }
+    try {
+      problemChild.get(-1);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      problemChild.get(1000);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      problemChild.get(1);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }*/
 
   }
 
