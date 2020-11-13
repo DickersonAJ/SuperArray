@@ -66,11 +66,39 @@ public class SuperArrayTester {
 
     try {
       SuperArray work = new SuperArray(20);
+      for (int i = 0; i < 30; i++) {
+        work.add("x");
+      }
       System.out.println(work);
     }
     catch (IllegalArgumentException e1) {
       System.out.println(e1);
     }
+
+    SuperArray work = new SuperArray(20);
+    for (int i = 0; i < 30; i++) {
+      work.add("x");
+    }
+    try {
+      work.get(-1);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      work.get(50);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      work.get(3);
+      System.out.println(work.get(3));
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+
 
     /*for (int i = problemChild.size(); i < 100; i++) {
       problemChild.add("constructors aren't void");
