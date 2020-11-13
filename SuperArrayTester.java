@@ -144,6 +144,27 @@ public class SuperArrayTester {
     catch (IndexOutOfBoundsException e1) {
       System.out.println(e1);
     }
+    try {
+      work.remove(-30);
+      System.out.println(work);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      work.remove(300);
+      System.out.println(work);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      work.remove(30);
+      System.out.println(work);
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
 
     /*for (int i = problemChild.size(); i < 100; i++) {
       problemChild.add("constructors aren't void");
