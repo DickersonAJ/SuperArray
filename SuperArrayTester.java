@@ -98,6 +98,30 @@ public class SuperArrayTester {
     catch (IndexOutOfBoundsException e1) {
       System.out.println(e1);
     }
+    try {
+      work.set(300, "Y");
+      System.out.println(work.set(3, "Y"));
+      System.out.println(work.get(3));
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      work.set(-123, "Y");
+      System.out.println(work.set(3, "Y"));
+      System.out.println(work.get(3));
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
+    try {
+      work.set(3, "Y");
+      System.out.println(work.set(3, "Z"));
+      System.out.println(work.get(3));
+    }
+    catch (IndexOutOfBoundsException e1) {
+      System.out.println(e1);
+    }
 
 
     /*for (int i = problemChild.size(); i < 100; i++) {
