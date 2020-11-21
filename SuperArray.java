@@ -135,7 +135,7 @@ public class SuperArray {
       throw new IndexOutOfBoundsException("index of " + index
         + " is too large");
     }
-    for (int i = index; i < size; i++) {
+    for (int i = index; i < size-1; i++) {
       set(i, data[i+1]);
     }
     set(size - 1, null);
