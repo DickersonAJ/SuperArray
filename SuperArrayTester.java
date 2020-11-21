@@ -1,7 +1,7 @@
 public class SuperArrayTester {
 
   public static void main(String[] args) {
-    /*SuperArray words = new SuperArray();
+    SuperArray words = new SuperArray();
     System.out.println( words.size() );
     words.add("kani");
     words.add("uni");
@@ -54,7 +54,7 @@ public class SuperArrayTester {
     System.out.println(words.toString());
     System.out.println(words.contains("hello"));
     System.out.println(words.contains("adios"));
-    SuperArray big = new SuperArray(100);*/
+    SuperArray big = new SuperArray(100);
 
     try {
       SuperArray problemChild = new SuperArray(-2);

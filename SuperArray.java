@@ -46,13 +46,16 @@ public class SuperArray {
       throw new IndexOutOfBoundsException("index of " + index
         + " cannot be negative");
     }
-    if (index >= size) {
+    else if (index >= size) {
       throw new IndexOutOfBoundsException("index of " + index
         + " is too large");
     }
+
+    else {
     String str = data[index];
     data[index] = element;
     return str;
+    }
   }
 
   private void resize() {
@@ -100,20 +103,27 @@ public class SuperArray {
       throw new IndexOutOfBoundsException("index of " + index
         + " cannot be negative");
     }
-    if (index > size) {
+    else if (index > size) {
       throw new IndexOutOfBoundsException("index of " + index
         + " is too large");
     }
+    else {
     if (index == size) {
       add(element);
     }
     else {
-      add(data[size]);
+      /*add(data[size]);
       for (int i = size+1; i > index-1; i--) {
         set(i+1, data[i]);
       }
+      set(index, element);*/
+      add(element);
+      for (int i = size-1; i > index; i--) {
+        set(i, data[i-1]);
+      }
       set(index, element);
     }
+  }
   }
 
   public void remove(int index) {
